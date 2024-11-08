@@ -1,0 +1,30 @@
+package com.tongsean.spring_security.resources;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TodoResource {
+	
+	
+	private static final List<Todo> LIST_TODO = List.of(
+			new Todo("tongsean", "A 1"),
+			new Todo("tongsean", "B 2")
+			);
+
+	@GetMapping(path="/todos")
+	public List<Todo> retrieveTodos() {
+		return LIST_TODO;
+	}
+	
+	@GetMapping(path="/users/{username}/todos")
+	public Todo retrieveTodoByUser() {
+		return LIST_TODO.get(0);
+	}
+}
+
+
+record Todo (String username, String description) {}

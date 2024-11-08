@@ -1,0 +1,5 @@
+package com.tongsean.example_oauth;
+
+public class OauthSecurityConfiguration {
+
+}

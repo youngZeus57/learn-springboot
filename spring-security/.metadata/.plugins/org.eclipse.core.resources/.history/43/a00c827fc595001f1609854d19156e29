@@ -1,0 +1,22 @@
+package com.tongsean.spring_security.resources;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TodoResource {
+	
+	
+	@GetMapping(path="/todos")
+	public List<Todo> retrieveTodos() {
+		return List.of(
+				new Todo("tongsean", "A 1"),
+				new Todo("tongsean", "B 2")
+				);
+	}
+}
+
+
+record Todo (String username, String description) {}

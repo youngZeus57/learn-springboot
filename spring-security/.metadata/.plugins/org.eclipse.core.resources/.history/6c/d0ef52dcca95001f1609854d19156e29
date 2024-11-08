@@ -1,0 +1,5 @@
+package com.tongsean.spring_security.basic;
+
+public class BasicAuthSecurityConfiguration {
+
+}

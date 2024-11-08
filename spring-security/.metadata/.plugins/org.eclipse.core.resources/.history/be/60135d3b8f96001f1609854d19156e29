@@ -1,0 +1,5 @@
+package com.tongsean.spring_security.jwt;
+
+public class JwtAuthenticationResource {
+
+}
